@@ -12,3 +12,4 @@ C:\Users\PC Mart Cambodia\Documents\BYU\BYU-Pathway Worldwide Online\Term4=Summe
 C:\Users\PC Mart Cambodia\Documents\BYU\BYU-Pathway Worldwide Online\Term4=Summer Semester\cse210\week01\exercise5\obj\Debug\net9.0\exercise5.pdb
 C:\Users\PC Mart Cambodia\Documents\BYU\BYU-Pathway Worldwide Online\Term4=Summer Semester\cse210\week01\exercise5\obj\Debug\net9.0\exercise5.genruntimeconfig.cache
 C:\Users\PC Mart Cambodia\Documents\BYU\BYU-Pathway Worldwide Online\Term4=Summer Semester\cse210\week01\exercise5\obj\Debug\net9.0\ref\exercise5.dll
+C:\Users\PC Mart Cambodia\Documents\BYU\BYU-Pathway Worldwide Online\Term4=Summer Semester\cse210\week01\exercise5\obj\Debug\net9.0\exercise5.sourcelink.json

@@ -19,13 +19,15 @@ class Program
     static string PromptUserName()
     {
         Console.Write("Please enter your name: ");
-        return Console.ReadLine();
+        string? name = Console.ReadLine();
+        return name ?? "User";
     }
 
     static int PromptUserNumber()
     {
         Console.Write("Please enter your favorite number: ");
-        return int.Parse(Console.ReadLine());
+        string? input = Console.ReadLine();
+        return int.TryParse(input, out int number) ? number : 0;
     }
 
     static int SquareNumber(int number)
