@@ -1,23 +1,43 @@
-﻿using System;
+using System;
 
 class Program
 {
     static void Main(string[] args)
     {
-        Fraction f1 = new Fraction();          // 1/1
-        Fraction f2 = new Fraction(5);         // 5/1
-        Fraction f3 = new Fraction(3, 4);      // 3/4
-        Fraction f4 = new Fraction(1, 3);      // 1/3
+        // This program exceeds the core requirements by supporting:
+        // - verse ranges in Reference (e.g., Proverbs 3:5-6)
+        // - hiding multiple words at a time for faster memorization
+        // - clean, encapsulated classes each with a single responsibility
+        // - ready for extensions like multiple scriptures or saving progress
 
-        DisplayFraction(f1);
-        DisplayFraction(f2);
-        DisplayFraction(f3);
-        DisplayFraction(f4);
-    }
+        Reference reference = new Reference("Proverbs", 3, 5, 6);
+        string text = "Trust in the Lord with all thine heart; and lean not unto thine own understanding.";
 
-    static void DisplayFraction(Fraction fraction)
-    {
-        Console.WriteLine($"Fraction: {fraction.GetFractionString()}");
-        Console.WriteLine($"Decimal: {fraction.GetDecimalValue()}\n");
+        Scripture scripture = new Scripture(reference, text);
+
+        Console.Clear();
+        Console.WriteLine("Scripture Memorizer Program");
+        Console.WriteLine("---------------------------");
+
+        while (!scripture.AllWordsHidden())
+        {
+            Console.Clear();
+            Console.WriteLine(scripture.GetDisplayText());
+
+            Console.WriteLine("\nPress Enter to hide more words or type 'quit' to exit:");
+            string input = Console.ReadLine().Trim().ToLower();
+
+            if (input == "quit")
+            {
+                break;
+            }
+
+            scripture.HideRandomWords();
+        }
+
+        Console.Clear();
+        Console.WriteLine("Final Scripture:\n");
+        Console.WriteLine(scripture.GetDisplayText());
+        Console.WriteLine("\nGood job! Goodbye.");
     }
 }
