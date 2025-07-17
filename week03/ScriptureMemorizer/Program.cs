@@ -18,12 +18,10 @@ class Program
         Console.Clear();
         Console.WriteLine("Scripture Memorizer Program");
         Console.WriteLine("---------------------------");
+        Console.WriteLine(scripture.GetDisplayText());
 
         while (!scripture.AllWordsHidden())
         {
-            Console.Clear();
-            Console.WriteLine(scripture.GetDisplayText());
-
             Console.WriteLine("\nPress Enter to hide more words or type 'quit' to exit:");
             string input = Console.ReadLine().Trim().ToLower();
 
@@ -32,12 +30,16 @@ class Program
                 break;
             }
 
-            scripture.HideRandomWords();
+            scripture.HideRandomWords(5);  // hide 5 words per enter for faster hiding
+            Console.Clear();
+            Console.WriteLine(scripture.GetDisplayText());
         }
 
-        Console.Clear();
-        Console.WriteLine("Final Scripture:\n");
-        Console.WriteLine(scripture.GetDisplayText());
+        if (scripture.AllWordsHidden())
+        {
+            Console.WriteLine("\nAll words are hidden! Great job memorizing.");
+        }
+
         Console.WriteLine("\nGood job! Goodbye.");
     }
 }
