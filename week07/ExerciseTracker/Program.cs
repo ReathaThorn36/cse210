@@ -1,6 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
 
+/*
+ * This program:
+ * - Demonstrates polymorphism with exercise classes
+ * - Displays a summary report of all exercises
+ * - Is structured for future input validation and menu interface additions
+ */
+
 class Program
 {
     static void Main()
@@ -18,3 +25,4 @@ class Program
         }
     }
 }
+
